@@ -1,0 +1,38 @@
+{
+    "name": "amondar/sextant",
+    "description": "Laravel Sextant Engine",
+    "type": "library",
+    "version": "1.3.5",
+    "authors": [
+        {
+            "name": "Sereda Oleg",
+            "email": "zaxodu11@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": ">=5.8",
+        "doctrine/dbal": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amondar\\Sextant\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": ["tests/TestCase.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "~3.8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amondar\\Sextant\\SextantServiceProvider"
+            ],
+            "aliases": {
+                "Sextant": "Amondar\\Sextant\\Facade"
+            }
+        }
+    }
+}
